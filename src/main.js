@@ -1,0 +1,1 @@
+console.log("API URL www.hdsfksdf.com/oihefo_ api_key=" + API_KEY)
