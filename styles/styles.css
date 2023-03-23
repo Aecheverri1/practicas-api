@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62,5%;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(22, 22, 30);
+}
+
+
+.header-section{
+    background-color: rgba(87, 86, 110, 0.584);
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    bottom: 0px;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 85%;
+}
+
+.menu-item {
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.menu-item p{
+    font-size: .6rem;
+    color: rgb(200, 199, 238);
+}
+
+.menu-icon--color {
+    color: rgb(200, 199, 238);
+    transform: scale(1.3);
+}
+
+
+.search-bar-section{
+    margin-top: 20px; 
+}
+.search-bar-section p {
+    color: white;
+    font-size: .8rem;
+    margin-left: 23px;
+    margin-bottom: 8px;
+}
+
+.search-bar-container {
+    display: flex;
+    width: 88%;
+    height: 30px;
+    background-color: rgba(87, 86, 110, 0.584);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.search-bar-container input{
+    width: 88%;
+    height: 24px;
+    padding-left: 10px;
+    border: none;
+    background-color: rgba(87, 86, 110, 0);
+    color: white;
+}
+
+.search-bar-container input::placeholder {
+    color: rgb(200, 199, 238);
+}
+
+.search-bar-container input:focus {
+    outline: none;
+}
+
+.search-bar-container i {
+    margin-left: 5px;
+    color: rgb(200, 199, 238);
+}
+
+.trends-section p {
+    color: white;
+    font-size: .8rem;
+    margin-left: 23px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.general-movie-container {
+    width: 90%;
+    display: flex;
+    overflow-y: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    margin: auto;
+}
+
+.movie-image {
+    width: 110px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.recommended-movie-section {
+    color: white;
+    width: 90%;
+    font-size: .8rem;
+    margin-left: 23px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.recommended-movie-section-title {
+    margin-bottom: 10px;
+}
+
+.recommended-movie-section-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner-container::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(101, 96, 160, 0) 0%, rgba(7, 119, 24, 0) 30%, rgb(22, 22, 30) 80%);
+    opacity: .9;
+    right: 0;
+    left: 0;
+}
+
+.movie-title-banner {
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 15px;
+    margin-left: 23px;
+}

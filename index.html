@@ -4,13 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLatzi Movies</title>
-    <link rel="stylesheet" href="./styles/app.css">
+    <title>Platzi Movies</title>
+
+    <!-- --- CSS --- -->
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- --- Fonts --- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Platzi Movies</h1>
-    
-    <script src="./src/secrets.js"></script>
-    <script src="./src/main.js"></script>
+    <header class="header-section">
+        <section class="header-container">
+            <div id="menu-home" class="menu-item">
+                <i class="fa-solid fa-house menu-icon--color"></i>
+                <p>Home</p>
+            </div>
+            <div id="menu-genres" class="menu-item">
+                <i class="fas fa-video menu-icon--color"></i>
+                <p>Genres</p>
+            </div>
+            <div id="menu-discover" class="menu-item">
+                <i class="fa-solid fa-rocket menu-icon--color"></i>
+                <p>Discover</p>
+            </div>
+            <div id="menu-search" class="menu-item">
+                <i class="fa-sharp fa-solid fa-magnifying-glass menu-icon--color"></i>
+                <p>Search</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="search-bar-section">
+            <p>What are you <b>looking for today?</b></p>
+            <div class="search-bar-container">
+                <input type="text" placeholder="Search...">
+                <i id="search-bar-btn" class="fa-sharp fa-solid fa-magnifying-glass searchbar-icon--color"></i>
+            </div>
+        </section>
+
+        <section class="trends-section">
+            <p>Today's <b>trends</b></p>
+            <article class="general-movie-container">
+            </article>
+        </section>
+
+        <section class="recommended-movie-section">
+            <p class="recommended-movie-section-title">You may <b>like</b></p>
+            <article class="banner-container">
+                <!-- <img class="recommended-movie-section-img" src="https://image.tmdb.org/t/p/w1280/gNOyIDGW8YY6AYbz6nMvrVSHSXs.jpg" alt="">
+                <p class="movie-title-banner">La casa del elefante</p> -->
+            </article>
+        </section>
+
+        <section class="recommended-categories-section">
+            <div>
+                <p>Documentaries</p>
+                <article id="recommended-documentaries-container" class="general-movie-container">
+                </article>
+            </div>
+            
+            <div>
+                <p>Crime</p>
+                <article id="recommended-crime-container" class="general-movie-container">
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/0bc9db981c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/src/secrets.js"></script>
+    <script src="/src/nodes.js"></script>
+    <script src="/src/main.js"></script>
+    <script src="/src/navigation.js"></script>
 </body>
 </html>

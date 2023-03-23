@@ -1,0 +1,5 @@
+    searchBarSection.classList.add();
+    popularSection.classList.add();
+    parallaxSection.classList.add();
+    recommendedSection.classList.add();
+    categoriesSection.classList.add();
