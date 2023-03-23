@@ -4,7 +4,8 @@ const headerSection = document.querySelector(".header-section");
 const searchBarSection = document.querySelector(".search-bar-section");
 const trendsSection = document.querySelector(".trends-section");
 const recommendedMovieSection = document.querySelector(".recommended-movie-section");
-const recommendedCategoriesSection = document.querySelector(".recommended-genres");
+const recommendedCategoriesSection = document.querySelector(".recommended-categories-section");
+const movieGenresSection = document.querySelector(".movie-genres-section");
 
 
 // CONTAINERS
@@ -28,3 +29,8 @@ const recommendedCrimeContainer = document.querySelector("#recommended-crime-con
 // BUTTONS
 
 const searchBarButton = document.querySelector("#search-bar-btn");
+
+const homeBtn = document.querySelector("#menu-home")
+const genresBtn = document.querySelector("#menu-genres")
+const discoverBtn = document.querySelector("#menu-discover")
+const searchBtn = document.querySelector("#menu-search")

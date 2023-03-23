@@ -58,13 +58,23 @@ async function getBannerRecommendation() {
 
 async function getMovieGenres() {
   const { data } = await api('/genre/movie/list')
-
   const genres = data.genres;
 
+  movieGenresSection.innerHTML = "";
+
   genres.forEach(genre => {
-    console.log(genre.name + genre.id);
+
+    const genreItem = document.createElement("div");
+    genreItem.classList.add("genre-item")
+
+    const genreTitle = document.createElement("p");
+    genreTitle.innerHTML = `${genre.name}`
+
+    genreItem.append(genreTitle);
+    movieGenresSection.appendChild(genreItem);
   })
-}
+};
+
 
 async function getMoviesByGenres(id, container) {
   const { data } = await api('/discover/movie', {params: {
@@ -75,16 +85,10 @@ async function getMoviesByGenres(id, container) {
   
   getMoviePosters(movieList, container)
 
-}
-
-
+};
 
 
 getTrends();
-
 getBannerRecommendation();
-
-getMovieGenres();
-
 getMoviesByGenres(99, recommendedDocumentaryContainer);
 getMoviesByGenres(80, recommendedCrimeContainer);
