@@ -187,3 +187,41 @@ html {
     font-weight: bold;
     border-radius: 6px;
 }
+
+.movie-detail-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 23px;
+    padding-right: 23px;
+    width: 100%;
+}
+
+.movie-title-container {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.movie-detail-title {
+    color: white;
+    width: 85%;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.movie-detail-rating {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-star {
+    color: yellow;
+}
+
+.movie-detail-description {
+    color: white;
+    text-align: justify;
+}
