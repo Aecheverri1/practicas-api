@@ -6,6 +6,7 @@ const trendsSection = document.querySelector(".trends-section");
 const recommendedMovieSection = document.querySelector(".recommended-movie-section");
 const recommendedCategoriesSection = document.querySelector(".recommended-categories-section");
 const movieGenresSection = document.querySelector(".movie-genres-section");
+const movieDetailSection = document.querySelector(".movie-detail-section");
 
 
 // CONTAINERS
@@ -24,13 +25,15 @@ const bannerContainer = document.querySelector(".banner-container");
 const recommendedDocumentaryContainer = document.querySelector("#recommended-documentaries-container");
 const recommendedCrimeContainer = document.querySelector("#recommended-crime-container");
 
+const similarMoviesContainer = document.querySelector(".similar-movies-container");
+
 
 
 // BUTTONS
 
 const searchBarButton = document.querySelector("#search-bar-btn");
 
-const homeBtn = document.querySelector("#menu-home")
-const genresBtn = document.querySelector("#menu-genres")
-const discoverBtn = document.querySelector("#menu-discover")
-const searchBtn = document.querySelector("#menu-search")
+const homeBtn = document.querySelector("#menu-home");
+const genresBtn = document.querySelector("#menu-genres");
+const discoverBtn = document.querySelector("#menu-discover");
+const searchBtn = document.querySelector("#menu-search");

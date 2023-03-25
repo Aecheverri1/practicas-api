@@ -36,6 +36,11 @@ function navigator() {
     else if(location.hash.startsWith('#search=')) {
         console.log('This is Category section');
 
+    } else if(location.hash.startsWith('#movie=')) {
+        console.log('This is Movie Detail section');
+
+        movieDetail();
+
     }
 
     document.body.scrollTop = 0;
@@ -67,3 +72,11 @@ function discoverPage() {
     recommendedCategoriesSection.classList.add('inactive');
     movieGenresSection.classList.add('inactive');
 };
+
+function movieDetail() {
+    searchBarSection.classList.add('inactive');
+    trendsSection.classList.add('inactive');
+    recommendedMovieSection.classList.add('inactive');
+    recommendedCategoriesSection.classList.add('inactive');
+    movieGenresSection.classList.add('inactive');
+}

@@ -28,6 +28,8 @@ async function getTrends() {
 
   const movies = data.results;
 
+  movies.forEach(movie => console.log(movie));
+
   generalMovieContainer.innerHTML = "";
 
   getMoviePosters(movies, generalMovieContainer);
@@ -87,8 +89,20 @@ async function getMoviesByGenres(id, container) {
 
 };
 
+async function getSimilarMovies() {
+
+  const { data } = await api(`/movie/12/similar`);
+
+  const movies = data.results;
+
+  getMoviePosters(movies, similarMoviesContainer);
+};
+
 
 getTrends();
 getBannerRecommendation();
 getMoviesByGenres(99, recommendedDocumentaryContainer);
 getMoviesByGenres(80, recommendedCrimeContainer);
+
+
+getSimilarMovies();
