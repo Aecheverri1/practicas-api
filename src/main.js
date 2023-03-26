@@ -13,13 +13,18 @@ const api = axios.create({
 function getMoviePosters(movies, container) {
   movies.forEach(movie => {
     const moviePoster = document.createElement("img");
-    moviePoster.setAttribute("src", `https://image.tmdb.org/t/p/w300${movie.poster_path}`);
+    moviePoster.setAttribute("src", `https://image.tmdb.org/t/p/w780${movie.poster_path}`);
     moviePoster.setAttribute("alt", movie.title);
     moviePoster.classList.add("movie-image");
+
+    moviePoster.addEventListener('click', () => {
+      location.hash = '#movie=' + movie.id;
+    });
 
     container.appendChild(moviePoster);
   });
 }
+
 
 // API CALLS
 
@@ -27,8 +32,6 @@ async function getTrends() {
   const { data } = await api('/trending/movie/day');
 
   const movies = data.results;
-
-  movies.forEach(movie => console.log(movie));
 
   generalMovieContainer.innerHTML = "";
 
@@ -74,9 +77,12 @@ async function getMovieGenres() {
 
     genreItem.append(genreTitle);
     movieGenresSection.appendChild(genreItem);
+
+    genreItem.addEventListener('click', () => {
+      location.hash = '#genre=' + genre.id;
+    })
   })
 };
-
 
 async function getMoviesByGenres(id, container) {
   const { data } = await api('/discover/movie', {params: {
@@ -84,25 +90,70 @@ async function getMoviesByGenres(id, container) {
   }});
 
   const movieList = data.results;
+
+  container.innerHTML = "";
   
   getMoviePosters(movieList, container)
 
 };
 
-async function getSimilarMovies() {
+async function getSimilarMovies(id) {
 
-  const { data } = await api(`/movie/12/similar`);
+  const { data } = await api(`/movie/${id}/similar`, {params: {
+    movie_id: id,
+  }});
 
   const movies = data.results;
 
+  similarMoviesContainer.innerHTML = "";
+
   getMoviePosters(movies, similarMoviesContainer);
 };
+
+async function getMovieById(id) {
+  const { data } = await api(`/movie/${id}`);
+
+  const movie = data;
+
+  const BackdropImgUrl = 'https://image.tmdb.org/t/p/w780' + movie.poster_path;
+
+  movieDetailTitle.innerHTML = `${movie.title}`;
+  movieDetailRating.innerHTML = `<i class="fa-solid fa-star"></i> ${movie.vote_average}`;
+  movieDetailDescription.innerHTML = `${movie.overview}`;
+
+
+  const movieGenres = movie.genres;
+
+  movieGenresContainer.innerHTML = "";
+
+  movieGenres.forEach(movieGenre => {
+    const movieRelatedCategories = document.createElement("p");
+    movieRelatedCategories.innerHTML = movieGenre.name;
+
+    movieGenresContainer.appendChild(movieRelatedCategories);
+  })
+
+
+  movieDetailBackPoster.style.background = `url(${BackdropImgUrl})`;
+
+  getSimilarMovies(id);
+}
+
+async function searchMovie(query) {
+
+  const { data } = await api('/search/movie', {params: {
+    query: query,
+  }})
+
+  const foundMovies = data.results;
+
+  searchMoviesContainer.innerHTML = "",
+
+  getMoviePosters(foundMovies, searchMoviesContainer);
+}
 
 
 getTrends();
 getBannerRecommendation();
 getMoviesByGenres(99, recommendedDocumentaryContainer);
 getMoviesByGenres(80, recommendedCrimeContainer);
-
-
-getSimilarMovies();

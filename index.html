@@ -26,23 +26,24 @@
                 <i class="fas fa-video menu-icon--color"></i>
                 <p>Genres</p>
             </div>
-            <div id="menu-discover" class="menu-item">
-                <i class="fa-solid fa-rocket menu-icon--color"></i>
-                <p>Discover</p>
+            <div id="menu-favorite" class="menu-item">
+                <i class="fa-solid fa-heart menu-icon--color"></i>
+                <p>Favorites</p>
             </div>
-            <div id="menu-search" class="menu-item">
-                <i class="fa-sharp fa-solid fa-magnifying-glass menu-icon--color"></i>
-                <p>Search</p>
+            <div id="menu-profile" class="menu-item">
+                <i class="fas fa-user-astronaut menu-icon--color"></i><i class=""></i>
+                <p>Profile</p>
             </div>
         </section>
     </header>
 
     <main>
+
         <section class="search-bar-section">
             <p>What are you <b>looking for today?</b></p>
             <div class="search-bar-container">
-                <input type="text" placeholder="Search...">
-                <i id="search-bar-btn" class="fa-sharp fa-solid fa-magnifying-glass searchbar-icon--color"></i>
+                <input class="search-input" type="text" placeholder="Search...">
+                <button class="searchButtonAction" id="search-bar-btn"><i class="fa-sharp fa-solid fa-magnifying-glass searchbar-icon--color"></i></button>
             </div>
         </section>
 
@@ -76,21 +77,20 @@
         </section>
 
         <section class="movie-detail-backposter">
-
+            <div class="history-back-container">
+                <i class="fa-solid fa-backward history-back"></i>
+            </div>
         </section>
 
         <section class="movie-detail-section">
-            <!-- <img class="movie-info-img" src="https://image.tmdb.org/t/p/w780/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt=""> -->
             <article class="movie-info-container">
                 <div class="movie-title-container">
                     <p class="movie-detail-title">Titulo de la pelicula</p>
-                    <span class="movie-detail-rating"><i class="fa-solid fa-star"></i> 7.8</span>
+                    <span class="movie-detail-rating">7.8</span>
                 </div>
                 <p class="movie-detail-description">A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks. A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.</p>
                 <div class="movie-genre-info">
-                    <p>Genre</p>
-                    <p>Genre</p>
-                    <p>Genre</p>
+
                 </div>
                 <p class="similar-movies-title">Similar Movies</p>
                 <div class="similar-movies-container general-movie-container">
@@ -99,6 +99,44 @@
             </article>
         </section>
 
+        <section class="movies-by-genres-section">
+            <div class="movies-by-genres-container">
+
+            </div>
+        </section>
+
+        <section class="search-movies-results-section">
+            <div class="search-movies-results-container">
+
+            </div>
+        </section>
+
+        <section class="favorites-section">
+            <div class="favorites-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Underconstruction_icon_gray.svg/1219px-Underconstruction_icon_gray.svg.png" alt="">
+                <p>This place is under construction</p>
+            </div>
+        </section>
+
+        <section class="user-profile-section">
+            <img class="profile-photo-placeholder" src="https://estadisticas.ecuavisa.com/sites/gestor/ampliada2022/user.webp" alt="profile-photo-placeholder">
+            <p class="user-fullname">Jhon Doe</p>
+            <p class="username">@JhonDoeCinema243</p>
+            <div class="preferences-container">
+                <div class="preferences-container-item">
+                    <i class="fas fa-database fa-2x preferencesBtn-style"></i>
+                    <p>Statistics</p>
+                </div>
+                <div class="preferences-container-item">
+                    <i class="fas fa-tools fa-2x preferencesBtn-style"></i>
+                    <p>Settings</p>
+                </div>
+                <div class="preferences-container-item">
+                    <i class="fas fa-sign-out-alt fa-2x preferencesBtn-style"></i>
+                    <p>Log out</p>
+                </div>
+            </div>
+        </section>
         
     </main>
     <footer>

@@ -15,14 +15,25 @@ html {
     display: none;
 }
 
+.history-back-container {
+    width: 30px;
+    height: 30px;
+    margin-left: 28px;
+    margin-top: 25px;
+}
+
+.history-back {
+    color: white;
+    scale: 1.5;
+}
+
 .header-section{
-    display: none;
+    display: flex;
     background-color: rgb(34, 33, 44);
     width: 100%;
     height: 48px;
     position: fixed;
     bottom: 0px;
-
 }
 
 .header-container {
@@ -118,9 +129,9 @@ html {
     color: white;
     width: 90%;
     font-size: .8rem;
-    margin-left: 23px;
+    margin-left: 20px;
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -152,8 +163,11 @@ html {
 .movie-title-banner {
     position: absolute;
     bottom: 0px;
-    padding-bottom: 15px;
-    margin-left: 23px;
+    right: 0px;
+    padding-bottom: 8px;
+    margin-right: 23px;
+    margin-bottom: 5px;
+    text-align: right;
 }
 
 .recommended-categories-section {
@@ -164,7 +178,7 @@ html {
     color: white;
     font-size: .8rem;
     margin-left: 23px;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -188,18 +202,11 @@ html {
     border-radius: 6px;
 }
 
-.movie-detail-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
 
 .movie-detail-backposter {
     width: 100%;
-    height: 403px;
-    background-image: url('https://image.tmdb.org/t/p/w780/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg');
-    background-size: cover;
+    height: 415px;
+    background-size: cover !important;
     position: fixed;
     top: 0;
 }
@@ -215,8 +222,7 @@ html {
     background-color: white;
     border-radius: 15px 15px 0 0;
     position: absolute;
-    margin-top: 1230px;
-    z-index: 1;
+    margin-top: 380px;
 }
 
 .movie-title-container {
@@ -241,6 +247,8 @@ html {
 
 .fa-star {
     color: rgb(233, 135, 23);
+    padding-bottom: 4px;
+    padding-right: 5px;
 }
 
 .movie-detail-description {
@@ -272,4 +280,112 @@ html {
 .similar-movies-title {
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.movies-by-genres-container {
+    display: block;
+    width: 91.5%;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+.search-movies-results-section {
+    width: 100%;
+}
+
+.search-movies-results-container {
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-left: 6px;
+}
+
+.searchButtonAction {
+    width: 40px;
+    background: none;
+    border: none;
+}
+
+.user-profile-section {
+    width: 100%;
+}
+
+.profile-photo-placeholder {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.user-fullname {
+    color: rgb(200, 199, 238);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.username {
+    color: rgb(200, 199, 238);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.preferences-container {
+    display: flex;
+    width: 220px;
+    height: 300px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.preferences-container-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(34, 33, 44);
+    border-radius: 6px;
+}
+
+.preferences-container-item p {
+    color: white;
+    font-weight: bold;
+    font-size: .7rem;
+}
+
+.preferencesBtn-style {
+    text-align: center;
+    width: 50px;
+    height: 38px;
+    color:rgb(200, 199, 238);
+    scale: 1;
+}
+
+
+
+
+
+.favorites-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.favorites-container img{
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.favorites-container p {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
 }
