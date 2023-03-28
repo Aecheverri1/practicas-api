@@ -5,17 +5,15 @@ homeBtn.addEventListener("click", () => { location.hash = '#home'});
 
 genresBtn.addEventListener("click", () => { location.hash = '#genres'});
 
-favoriteBtn.addEventListener("click", () => { location.hash = '#favorite'});
-
 arrowBackBtn.addEventListener("click", () => { location.hash = '#home'});
 
 profileBtn.addEventListener("click", () => { location.hash = '#profile'});
 
-favoriteBtn.addEventListener("click", () => { location.hash = '#favorites'});
+searchBtn.addEventListener("click", () => { location.hash = '#search'});
 
 searchBarButton.addEventListener("click",() => {
 
-    location.hash = '#search='+ searchBarInput.value;
+    location.hash = '#foundmovie='+ searchBarInput.value;
     const [_, query] = location.hash.split('=');
 
     searchMovie(query);
@@ -26,13 +24,13 @@ function navigator() {
     location
     
     if(location.hash.startsWith('#genres')) {
-        console.log('This is Genres section');
+        console.log('This is Genres List section');
 
         genresPage();
     }
 
     else if(location.hash.startsWith('#genre=')) {
-        console.log('This is Genre section');
+        console.log('This is the Specific Genre section');
 
         moviesByGenres();
 
@@ -44,14 +42,14 @@ function navigator() {
 
     }
 
-    else if(location.hash.startsWith('#favorites')) {
-        console.log('This is Favorite section');
+    else if(location.hash.startsWith('#search')) {
+        console.log('This is Search and Favorites section');
 
-        favoritesPage();
+        searchAndFavoritesPage();
     }
 
-    else if(location.hash.startsWith('#search=')) {
-        console.log('This is Search section');
+    else if(location.hash.startsWith('#foundmovie=')) {
+        console.log('This is Search By Query section');
 
         searchPage();
     }
@@ -73,6 +71,8 @@ function navigator() {
     }
 
     else {
+
+        console.log('This is Home section');
         homePage()
     }
 
@@ -120,7 +120,7 @@ function genresPage() {
 function searchPage() {
     headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
-    searchBarSection.classList.add('inactive');
+    searchBarSection.classList.remove('inactive');
     trendsSection.classList.add('inactive');
     recommendedMovieSection.classList.add('inactive');
     recommendedCategoriesSection.classList.add('inactive');
@@ -186,11 +186,11 @@ function profilePage() {
     loginHeaderSection.classList.add('inactive');
 }
 
-function favoritesPage() {
+function searchAndFavoritesPage() {
 
     headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
-    searchBarSection.classList.add('inactive');
+    searchBarSection.classList.remove('inactive');
     trendsSection.classList.add('inactive');
     recommendedMovieSection.classList.add('inactive');
     recommendedCategoriesSection.classList.add('inactive');

@@ -50,5 +50,5 @@ const arrowBackBtn = document.querySelector(".history-back-container");
 
 const homeBtn = document.querySelector("#menu-home");
 const genresBtn = document.querySelector("#menu-genres");
-const favoriteBtn = document.querySelector("#menu-favorite");
+const searchBtn = document.querySelector("#menu-favorite");
 const profileBtn = document.querySelector("#menu-profile");

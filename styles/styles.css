@@ -337,7 +337,7 @@ html {
 
 .movies-by-genres-container {
     display: block;
-    width: 91.5%;
+    width: 308px;
     margin: 0 auto;
     margin-top: 12px;
 }
@@ -347,10 +347,9 @@ html {
 }
 
 .search-movies-results-container {
-    width: 93%;
+    width: 308px;
     margin: 0 auto;
     margin-top: 15px;
-    padding-left: 6px;
 }
 
 .searchButtonAction {
