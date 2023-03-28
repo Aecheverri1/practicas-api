@@ -1,6 +1,7 @@
 // SECTIONS
 
 const headerSection = document.querySelector(".header-section");
+const loginHeaderSection = document.querySelector(".loggin-header-section")
 const searchBarSection = document.querySelector(".search-bar-section");
 const trendsSection = document.querySelector(".trends-section");
 const recommendedMovieSection = document.querySelector(".recommended-movie-section");

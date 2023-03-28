@@ -82,7 +82,8 @@ function navigator() {
 }
 
 function homePage() {
-    searchBarSection.classList.remove('inactive');
+    headerSection.classList.remove("inactive");
+    searchBarSection.classList.add('inactive');
     arrowBackBtn.classList.add('inactive');
     trendsSection.classList.remove('inactive');
     recommendedMovieSection.classList.remove('inactive');
@@ -94,9 +95,11 @@ function homePage() {
     searchMoviesContainer.classList.add('inactive');
     userProfileSection.classList.add('inactive');
     favoritesSection.classList.add('inactive');
+    loginHeaderSection.classList.remove('inactive');
 };
 
 function genresPage() {
+    headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
     searchBarSection.classList.add('inactive');
     trendsSection.classList.add('inactive');
@@ -109,13 +112,15 @@ function genresPage() {
     searchMoviesContainer.classList.add('inactive');
     userProfileSection.classList.add('inactive');
     favoritesSection.classList.add('inactive');
+    loginHeaderSection.classList.remove('inactive');
 
     getMovieGenres();
 };
 
 function searchPage() {
+    headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
-    searchBarSection.classList.remove('inactive');
+    searchBarSection.classList.add('inactive');
     trendsSection.classList.add('inactive');
     recommendedMovieSection.classList.add('inactive');
     recommendedCategoriesSection.classList.add('inactive');
@@ -126,9 +131,11 @@ function searchPage() {
     searchMoviesContainer.classList.remove('inactive');
     userProfileSection.classList.add('inactive');
     favoritesSection.classList.add('inactive');
+    loginHeaderSection.classList.remove('inactive');
 };
 
 function movieDetail() {
+    headerSection.classList.add("inactive");
     arrowBackBtn.classList.remove('inactive');
     searchBarSection.classList.add('inactive');
     trendsSection.classList.add('inactive');
@@ -141,10 +148,12 @@ function movieDetail() {
     searchMoviesContainer.classList.add('inactive');
     userProfileSection.classList.add('inactive');
     favoritesSection.classList.add('inactive');
+    loginHeaderSection.classList.add('inactive');
 }
 
 function moviesByGenres() {
 
+    headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
     searchBarSection.classList.add('inactive');
     trendsSection.classList.add('inactive');
@@ -157,9 +166,11 @@ function moviesByGenres() {
     searchMoviesContainer.classList.add('inactive');
     userProfileSection.classList.add('inactive');
     favoritesSection.classList.add('inactive');
+    loginHeaderSection.classList.remove('inactive');
 }
 
 function profilePage() {
+    headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
     searchBarSection.classList.add('inactive');
     trendsSection.classList.add('inactive');
@@ -172,9 +183,12 @@ function profilePage() {
     searchMoviesContainer.classList.add('inactive');
     userProfileSection.classList.remove('inactive');
     favoritesSection.classList.add('inactive');
+    loginHeaderSection.classList.add('inactive');
 }
 
 function favoritesPage() {
+
+    headerSection.classList.remove("inactive");
     arrowBackBtn.classList.add('inactive');
     searchBarSection.classList.add('inactive');
     trendsSection.classList.add('inactive');
@@ -187,4 +201,5 @@ function favoritesPage() {
     searchMoviesContainer.classList.add('inactive');
     userProfileSection.classList.add('inactive');
     favoritesSection.classList.remove('inactive');
+    loginHeaderSection.classList.remove('inactive');
 }

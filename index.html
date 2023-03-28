@@ -39,6 +39,16 @@
 
     <main>
 
+        <section class="loggin-header-section">
+            <div class="loggin-header-container">
+                <h2 class="web-logo"><span>Up</span>Movies</h2>
+                <div class="subscription-container">
+                    <p>Log in</p>
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </section>
+
         <section class="search-bar-section">
             <p>What are you <b>looking for today?</b></p>
             <div class="search-bar-container">
@@ -119,23 +129,22 @@
         </section>
 
         <section class="user-profile-section">
-            <img class="profile-photo-placeholder" src="https://estadisticas.ecuavisa.com/sites/gestor/ampliada2022/user.webp" alt="profile-photo-placeholder">
-            <p class="user-fullname">Jhon Doe</p>
-            <p class="username">@JhonDoeCinema243</p>
-            <div class="preferences-container">
-                <div class="preferences-container-item">
-                    <i class="fas fa-database fa-2x preferencesBtn-style"></i>
-                    <p>Statistics</p>
-                </div>
-                <div class="preferences-container-item">
-                    <i class="fas fa-tools fa-2x preferencesBtn-style"></i>
-                    <p>Settings</p>
-                </div>
-                <div class="preferences-container-item">
-                    <i class="fas fa-sign-out-alt fa-2x preferencesBtn-style"></i>
-                    <p>Log out</p>
-                </div>
-            </div>
+            
+            <video id="background-video" autoplay loop muted poster="./images/first-frame.jpg">
+            <source src="https://download-video.akamaized.net/2/playback/618d9049-9f84-4d34-8343-9621556495e5/c3466543?__token__=st=1679956261~exp=1679970661~acl=%2F2%2Fplayback%2F618d9049-9f84-4d34-8343-9621556495e5%2Fc3466543%2A~hmac=0440effa89c4f638db79b9f1892093cbbc19171ff31af598fe52b5fa4b478be1&r=dXMtd2VzdDE%3D" type="video/mp4">
+            </video>
+
+            <p class="loggin-solgan">Watching <b>movies</b> made easier</p>
+
+            <form class="loggin-form" action="">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+    
+                <label for="password">password</label>
+                <input type="password" name="password">
+
+                <button><b>Log in</b></button>
+            </form>
         </section>
         
     </main>
