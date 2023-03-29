@@ -11,12 +11,16 @@ profileBtn.addEventListener("click", () => { location.hash = '#profile'});
 
 searchBtn.addEventListener("click", () => { location.hash = '#search'});
 
+logginHeaderButton.addEventListener("click", () => { location.hash = '#profile'})
+
 searchBarButton.addEventListener("click",() => {
 
     location.hash = '#foundmovie='+ searchBarInput.value;
     const [_, query] = location.hash.split('=');
 
-    searchMovie(query);
+    searchMovie(query, 1, searchMoviesContainer);
+    searchMovie(query, 2, searchMoviesContainer2);
+    searchMovie(query, 3, searchMoviesContainer3);
     
 });
 

@@ -9,6 +9,7 @@
     <!-- --- CSS --- -->
 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/tablet.css" media="all and (min-width: 768px)">
 
     <!-- --- Fonts --- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +44,7 @@
             <div class="loggin-header-container">
                 <h2 class="web-logo"><span>Up</span>Movies</h2>
                 <div class="subscription-container">
-                    <p>Log in</p>
+                    <p id="loggin-header-button">Log in</p>
                     <button>Subscribe</button>
                 </div>
             </div>
@@ -70,13 +71,13 @@
         </section>
 
         <section class="recommended-categories-section">
-            <div>
+            <div class="recommended-categories-list-container">
                 <p class="recommended-documentaries">Documentaries</p>
                 <article id="recommended-documentaries-container" class="general-movie-container">
                 </article>
             </div>
             
-            <div>
+            <div class="recommended-categories-list-container">
                 <p class="recommended-crime">Crime</p>
                 <article id="recommended-crime-container" class="general-movie-container">
                 </article>
@@ -117,7 +118,10 @@
 
         <section class="search-movies-results-section">
             <div class="search-movies-results-container">
-
+            </div>
+            <div class="search-movies-results-container2">
+            </div>
+            <div class="search-movies-results-container3">
             </div>
         </section>
 
@@ -139,14 +143,17 @@
                 <label for="password">password</label>
                 <input type="password" name="password">
 
+                <div class="remember-pass-container">
+                    <input type="checkbox">
+                    <label for="checkbox">Remember password</label>
+                </div>
+
                 <button><b>Log in</b></button>
             </form>
+            <p class="recover-password">Forgot password?</p>
         </section>
         
     </main>
-    <footer>
-
-    </footer>
 
 
     <script src="https://kit.fontawesome.com/0bc9db981c.js" crossorigin="anonymous"></script>

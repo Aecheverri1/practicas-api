@@ -41,6 +41,8 @@ const similarMoviesContainer = document.querySelector(".similar-movies-container
 const moviesByGenresContainer = document.querySelector(".movies-by-genres-container");
 
 const searchMoviesContainer = document.querySelector(".search-movies-results-container");
+const searchMoviesContainer2 = document.querySelector(".search-movies-results-container2");
+const searchMoviesContainer3 = document.querySelector(".search-movies-results-container3");
 
 // BUTTONS
 
@@ -52,3 +54,5 @@ const homeBtn = document.querySelector("#menu-home");
 const genresBtn = document.querySelector("#menu-genres");
 const searchBtn = document.querySelector("#menu-favorite");
 const profileBtn = document.querySelector("#menu-profile");
+
+const logginHeaderButton = document.querySelector("#loggin-header-button");

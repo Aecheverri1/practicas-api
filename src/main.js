@@ -139,17 +139,31 @@ async function getMovieById(id) {
   getSimilarMovies(id);
 }
 
-async function searchMovie(query) {
+// async function searchMovie(query,) {
+
+//   const { data } = await api('/search/movie', {params: {
+//     query: query,
+//   }})
+
+//   const foundMovies = data.results;
+
+//   searchMoviesContainer.innerHTML = "",
+
+//   getMoviePosters(foundMovies, searchMoviesContainer);
+// }
+
+async function searchMovie(query, page, container) {
 
   const { data } = await api('/search/movie', {params: {
     query: query,
+    page: page,
   }})
 
   const foundMovies = data.results;
 
-  searchMoviesContainer.innerHTML = "",
+  container.innerHTML = "",
 
-  getMoviePosters(foundMovies, searchMoviesContainer);
+  getMoviePosters(foundMovies, container);
 }
 
 
